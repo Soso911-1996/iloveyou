@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #ffe6f0;
+    font-family: sans-serif;
+  }
+  button {
+    padding: 20px 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+    background: #ff6fa5;
+    color: white;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #ff4d8d;
+  }
+  #popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+  }
+  #popup-box {
+    background: white;
+    padding: 40px 60px;
+    border-radius: 16px;
+    font-size: 28px;
+    color: #ff4d8d;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+  #popup-box button {
+    margin-top: 20px;
+    padding: 10px 24px;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+  <button id="clickBtn">Click me</button>
+
+  <div id="popup">
+    <div id="popup-box">
+      morning iloveyou
+      <br>
+      <button id="closeBtn">Close</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('clickBtn').addEventListener('click', function() {
+      document.getElementById('popup').style.display = 'flex';
+    });
+    document.getElementById('closeBtn').addEventListener('click', function() {
+      document.getElementById('popup').style.display = 'none';
+    });
+  </script>
+</body>
+</html>
